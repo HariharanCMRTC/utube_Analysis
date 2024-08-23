@@ -40,11 +40,11 @@ def predictor():
         comment = request.form.get("comments")
         genre  =request.form.get("genre")
         prediction = model.predict([[float(nview),float(dislike),float(comment),float(genre)]])
-        
+
         return render_template("message1.html",prediction=prediction[0])    
     else:
         return render_template("predictor.html")
 
 
 if __name__ == "__main__":
-    app.run(debug = True)
+    app.run(host = "0.0.0.0",port=5050)

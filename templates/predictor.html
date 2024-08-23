@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Like Predictor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            border: 1px solid #444;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            font-size: 1rem;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: #f39c12;
+            color: #121212;
+            border: none;
+            border-radius: 4px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            animation: buttonFadeIn 0.5s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #e67e22;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes buttonFadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Like Predictor</h1>
+        <form action="/predictor" method="POST">
+            <label for="views">Views</label>
+            <input type="number" id="views" name="views" placeholder="Enter the number of views" required>
+
+            <label for="dislikes">Dislikes</label>
+            <input type="number" id="dislikes" name="dislikes" placeholder="Enter the number of dislikes" required>
+
+            <label for="comments">Comment Count</label>
+            <input type="number" id="comments" name="comments" placeholder="Enter the number of comments" required>
+
+            <label for="genre">Genre</label>
+            <select id="genre" name="genre" required>
+                <option value="">Select Genre</option>
+                <option value="0">Autos & Vehicles</option>
+                <option value="1">Comedy</option>
+                <option value="2">Education</option>
+                <option value="3">Entertainment</option>
+                <option value="4">Film & Animation</option>
+                <option value="5">Gaming</option>
+                <option value="6">Howto & Style</option>
+                <option value="7">Music</option>
+                <option value="8">News & Politics</option>
+                <option value="9">Nonprofits & Activism</option>
+                <option value="10">People & Blogs</option>
+                <option value="11">Pets & Animals</option>
+                <option value="12">Science & Technology</option>
+                <option value="13">Shows</option>
+                <option value="14">Sports</option>
+                <option value="15">Travel & Events</option>
+            </select>
+
+            <button type="submit">Predict Likes</button>
+        </form>
+        <!-- Back to Home Button -->
+        <a href="/"><button>Back to Home</button></a>
+    </div>
+
+</body>
+</html>

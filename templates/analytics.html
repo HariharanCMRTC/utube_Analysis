@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Analytics</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px 50px;
+            background-color: #1e1e1e;
+        }
+
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+        .analytics-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #121212;
+            padding: 20px;
+        }
+
+        .analytics-container {
+            width: 100%;
+            max-width: 1200px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/">YouTube Analysis</a>
+        </div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/analytics">Analytics</a>
+            <a href="/predictor">Like Predictor</a>
+            <a href="/contact">Contact Us</a>
+        </div>
+    </div>
+
+    <section class="analytics-section">
+        <div class="analytics-container">
+            <div class='tableauPlaceholder' id='viz1724404538531' style='position: relative'>
+                <noscript><a href='#'><img alt='Loss Analysis ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Day2_Superstore_17223444166190&#47;LossAnalysis&#47;1_rss.png' style='border: none' /></a></noscript>
+                <object class='tableauViz'  style='display:none;'>
+                    <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                    <param name='embed_code_version' value='3' /> 
+                    <param name='site_root' value='' />
+                    <param name='name' value='Day2_Superstore_17223444166190&#47;LossAnalysis' />
+                    <param name='tabs' value='no' />
+                    <param name='toolbar' value='yes' />
+                    <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Da&#47;Day2_Superstore_17223444166190&#47;LossAnalysis&#47;1.png' /> 
+                    <param name='animate_transition' value='yes' />
+                    <param name='display_static_image' value='yes' />
+                    <param name='display_spinner' value='yes' />
+                    <param name='display_overlay' value='yes' />
+                    <param name='display_count' value='yes' />
+                    <param name='language' value='en-GB' />
+                </object>
+            </div>
+            <script type='text/javascript'>
+                var divElement = document.getElementById('viz1724404538531');
+                var vizElement = divElement.getElementsByTagName('object')[0];                    
+                if ( divElement.offsetWidth > 800 ) { 
+                    vizElement.style.width='1169px';
+                    vizElement.style.height='854px';
+                } else if ( divElement.offsetWidth > 500 ) { 
+                    vizElement.style.width='1169px';
+                    vizElement.style.height='854px';
+                } else { 
+                    vizElement.style.width='100%';
+                    vizElement.style.height='1227px';
+                }                    
+                var scriptElement = document.createElement('script');
+                scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                vizElement.parentNode.insertBefore(scriptElement, vizElement);
+            </script>
+        </div>
+    </section>
+</body>
+</html>
